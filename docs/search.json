@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-20T19:54:08-08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Alicia Fennell",
+      "author": [],
+      "contents": "\n\n          \n      \n      Alicia Fennell\n      \n      \n      Home\n      About\n      Alicia Fennell\n      ☰\n      \n      \n      \n        \n          \n            Alicia Fennell\n          \n          \n            \n              I like to eat chocolate and read books!\n            \n            \n              I like to eat chocolate and read books!\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      Twitter\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                                \n                  \n                    \n                      Email\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    Twitter\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                                \n                  \n                    Email\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-01-20T19:54:09-08:00"
+    }
+  ],
+  "collections": []
+}
