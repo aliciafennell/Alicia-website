@@ -3,16 +3,14 @@ title: "Alicia Fennell"
 image: "alicia.jpg"
 links:
   - label: LinkedIn
-    url: "https://linkedin.com/"
-  - label: Twitter
-    url: "https://twitter.com/"
+    url: "https://www.linkedin.com/in/alicia-fennell/"
   - label: GitHub
-    url: "https://github.com/"
+    url: "https://github.com/aliciafennell"
   - label: Email
-    url: "mailto:email@email.com"
+    url: "aliciafennell@bren.ucsb.edu"
 output:
   postcards::jolla
 site: distill::distill_website
 ---
  
-I like to eat chocolate and read books! 
+I like to eat chocolate and read books!  

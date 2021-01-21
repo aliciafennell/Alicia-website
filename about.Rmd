@@ -1,7 +1,8 @@
 ---
 title: "About this site"
+image: "mountains.jpg"
 description: |
-  Some additional details about the website
+  Here are some details about the website wooohooooo blah blah blah 
 ---
 
 ```{r setup, include=FALSE}
