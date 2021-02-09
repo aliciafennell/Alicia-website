@@ -1,6 +1,6 @@
 ---
 title: "Alicia Fennell"
-image: "alicia.jpg"
+image: "headshot.jpeg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/alicia-fennell/"

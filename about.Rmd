@@ -1,6 +1,6 @@
 ---
 title: "About this site"
-image: "mountains.jpg"
+image: "headshot.jpeg"
 description: |
   Here are some details about the website wooohooooo blah blah blah 
 ---
