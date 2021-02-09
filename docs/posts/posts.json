@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2021-02-08-welcome/",
+    "title": "Welcome",
+    "description": "Welcome to my blog! Thanks for joining me here.",
+    "author": [
+      {
+        "name": "Alicia Fennell",
+        "url": {}
+      }
+    ],
+    "date": "2021-02-08",
+    "categories": [],
+    "contents": "\nHello reader!\nIt’s Monday, February 8th, 2021, and my master’s group project team is approaching our faculty review presentations. Being in grad school is busy, but it’s also exciting. Like now—I’m building my own website on RStudio, something I never would have expected I’d be doing just a few years ago! I hope you can learn a little bit more about me through this website, and please reach out to connect!\nThis website was made with Distill–more information below.\nDistill is a publication format for scientific and technical writing, native to the web. Learn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-02-08T20:38:11-08:00",
+    "input_file": {}
+  }
+]

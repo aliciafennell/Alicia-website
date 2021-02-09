@@ -1,11 +1,12 @@
 ---
 title: "About this site"
-image: "headshot.jpeg"
+image: "mountains.jpg"
 description: |
-  Here are some details about the website wooohooooo blah blah blah 
+  About section.  
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+This could be an "about" section with some things about me, or this could be a "projects" section, or this could maybe get deleted. We will see. 
