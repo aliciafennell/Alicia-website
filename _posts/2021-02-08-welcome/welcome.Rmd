@@ -15,12 +15,19 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
+```{r, out.width='100%', fig.align='center'}
+
+knitr::include_graphics('mountains.jpg')
+```
+(Olympic National Park, summer 2019)
+
 #### Hello reader! 
 
 It's Monday, February 8th, 2021, and my master's group project team is approaching our faculty review presentations. Being in grad school is *busy*, but it's also exciting. Like now&mdash;I'm building my own website on RStudio, something I never would have expected I'd be doing just a few years ago! I hope you can learn a little bit more about me through this website, and please reach out to connect! 
 
 
-This website was made with Distill--more information below. 
+This website was made with Distill&mdash;more information below. 
 
 ---
 

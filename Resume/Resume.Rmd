@@ -16,7 +16,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Two truths and a lie
+# Two truths and a lie 
+(placeholder - but tell me what your guess is if you read this:))
+
 
  * I've been charged by bison.
  * I've been swimming with orcas. 
@@ -34,28 +36,63 @@ tribble(
   detailed_entries(Degree, Year, Institution, Where)
 ```
 
+# Highlighted Coursework 
+
+```{r}
+
+## need to get rid of the comma after data: 
+
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Data:", "", "Statistics & Data Analysis for Environmental Science & Management, Advanced Data Analysis, Geographic Information Systems (GIS)", "(Bren School)",
+  "Economics, Law, & Policy:", "", "Economics and Policy of Climate Change, Economics of Environmental Management, Environmental Law and Policy, Environmental Politics and Policy, Cost-Benefit Analysis and Non-market Valuation", "(Bren School)",
+   "Communication:", "", "Writing Skills for Environmental Professionals, Advanced Environmental Communication, Survey Design and Environmental Public Opinion, Equity and the Environment", "(Bren School)",
+  "Energy & Climate:", "", "Energy, Technology and the Environment, Climate Change Impacts and Adaptation, Earth System Science", "(Bren School)"
+  
+  
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
 # Professional Experience 
 
 ```{r}
 tribble(
-  ~Year, ~Type, ~Desc,
-  1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
-  1911, "Chemistry", "Awarded for the discovery of radium and polonium"
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Research & Engagement Intern", "2020", "Santa Barbara County Food Action Network", "Santa Barbara, CA",
+  "Teaching Assistant", "2019-2020", "University of California, Santa Barbara", "Santa Barbara, CA",
+  "Environmental Educator/Naturalist", "2015-2019", "Exploring New Horizons Outdoor School", "Loma Mar, CA",
+  "Summer Camp Director", "2018", "Life Lab", "Santa Cruz, CA",
+  "Ecuador Trip Co-Leader", "2017", "The Road Less Traveled", "Ecuador",
+  "Summer Camp Assistant Director", "2015-2016", "Life Lab", "Santa Cruz, CA",
+  "Naturalist Intern", "2014-2015", "Sierra Outdoor School", "Sonora, CA"
 ) %>% 
-  brief_entries(
-    glue::glue("Nobel Prize in {Type}"),
-    Year, 
-    Desc
-  )
+  detailed_entries(Degree, Year, Institution, Where)
 ```
 
 # Additional Experience 
 
 ```{r}
-library(dplyr)
-knitr::write_bib(c("vitae", "tibble"), "packages.bib")
-
-bibliography_entries("packages.bib") %>%
-  arrange(desc(author$family), issued)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Community Volunteer", "2017-2019", "Puente de la Costa Sur", "Pescadero, CA",
+  "Conference Organizer", "2017-2019", "Pescadero Valley Conference", "Loma Mar, CA",
+  "Ropes Course Facilitator", "2015-2019", "YMCA Camp Jones Gulch", "La Honda, CA"
+  
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
 ```
 
+# Skills and Certifications 
+
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Computer & Software:", "", "Microsoft Office Suite (Excel, PowerPoint, Word), R and RStudio, ArcGIS, Slack, Zoom, Trello", "",
+  "Language:", "", "Spanish (verbal and written proficiency)", "",
+  "Certifications:", "", "Wilderness First Responder, California Naturalist Program (2014)", ""
+
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
