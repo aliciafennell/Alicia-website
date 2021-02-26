@@ -1,16 +1,17 @@
 name: "."
-title: "Alicia Fennell"
+title: "ALICIA FENNELL"
 description: |
   Alicia Fennell
 output_dir: "docs"
 navbar:
   right:
-    - text: "Home"
+    - text: "HOME"
       href: index.html
-    - text: "About"
+    - text: "ABOUT"
       href: about.html
-    - text: "Resume"
+    - text: "RESUME"
       href: Resume/Resume.pdf
-    - text: "Blog"
+    - text: "BLOG"
       href: blog.html
 output: distill::distill_article
+theme: style.css
