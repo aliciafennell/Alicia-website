@@ -39,7 +39,6 @@ tribble(
 # Highlighted Coursework 
 
 ```{r}
-
 ## need to get rid of the comma after data: 
 
 tribble(

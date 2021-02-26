@@ -4,10 +4,11 @@ description: |
   Alicia Fennell
 output_dir: "docs"
 navbar:
+  logo: bry.png
   right:
     - text: "HOME"
       href: index.html
-    - text: "ABOUT"
+    - text: "PROJECTS"
       href: about.html
     - text: "RESUME"
       href: Resume/Resume.pdf

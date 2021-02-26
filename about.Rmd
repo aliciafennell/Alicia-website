@@ -1,12 +1,20 @@
 ---
-title: "About this site"
+title: "Projects"
 image: "mountains.jpg"
 description: |
-  About section.  
+  Projects section.  
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+library(emo)
 ```
 
-This could be an "about" section with some things about me, or this could be a "projects" section, or this could maybe get deleted. We will see. 
+Here are some super cool projects I've worked on...... I need to figure out how to make projects link here... 
+
+```{r}
+emo::ji("prank")
+emo::ji("clock")
+```
+
