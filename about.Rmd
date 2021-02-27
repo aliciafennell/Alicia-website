@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "About"
 image: "mountains.jpg"
 description: |
   Projects section.  
@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 library(emo)
 ```
 
-Here are some super cool projects I've worked on...... I need to figure out how to make projects link here... 
+Maybe I'll write some things about myself here...  
 
 ```{r}
 emo::ji("prank")

@@ -8,11 +8,11 @@ navbar:
   right:
     - text: "HOME"
       href: index.html
-    - text: "PROJECTS"
+    - text: "ABOUT"
       href: about.html
     - text: "RESUME"
       href: Resume/Resume.pdf
-    - text: "BLOG"
+    - text: "PROJECTS"
       href: blog.html
 output: distill::distill_article
 theme: style.css

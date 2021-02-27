@@ -1,0 +1,98 @@
+---
+title: "Working with Raster Data"
+description: |
+  Exploring species richness of Cetaceans along the California coast
+author:
+  - name: Alicia Fennell
+    url: {}
+date: 02-27-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: Code
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+
+```
+
+This project uses data from aquamaps.org to map species richness of Cetaceans along the California coast. The spatial data downloaded contained information on the probability of occurrence for 35 Cetacean species between 125° W to 115° W and 32° N to 38° N. For this project, if the probability of occurrence was greater than or equal to 0.6, the species was considered present. The resulting map shows species richness along the coast, based on how many species are considered present in each pixel. 
+
+```{r}
+## Attach packages
+library(raster)
+library(tidyverse)
+library(here)
+library(sf)
+library(fasterize)
+library(janitor)
+library(rnaturalearth)
+library(ggspatial)
+
+## Read in the data stacked 
+my_files <- list.files(path = "ca_cetaceans", full.names = TRUE)
+tif_stack <- raster::stack(my_files)
+# tif_stack
+# plot(tif_stack)
+
+### Read in spatial data to show CA 
+## check the projection of both layers
+ca_counties <- read_sf("ca_counties", layer = "CA_Counties_TIGER2016") 
+# st_crs(tif_stack)
+# st_crs(ca_counties)
+
+## Different projections - transform to make the same 
+ca_counties <- st_transform(ca_counties, st_crs(tif_stack))
+
+## Set the threshold for what determines if a species is present 
+## Starting with threshold of 0.6 
+threshold_fun <- function(x, thresh = 0.6) {
+  y <- ifelse(x >= thresh, 1, 0)
+  return(y)
+}
+
+species_thresh <- calc(tif_stack, fun = threshold_fun)
+# plot(species_thresh)
+
+## Add rasters together to calculate species richness
+species_richness <- calc(species_thresh, fun = sum, na.rm = TRUE)
+# plot(species_richness)
+
+## Make data frame for plotting with ggplot 
+spec_rich_df <- rasterToPoints(species_richness) %>% 
+  as.data.frame()
+
+## Look at rnaturalearth coastline 
+# coastline <- ne_download(scale = 110, type = 'coastline', category = 'physical', returnclass = "sf")
+# plot(coastline)
+
+```
+
+```{r}
+## Plot species richness 
+ggplot() +
+  geom_raster(data = spec_rich_df,
+              aes(x = x,
+                  y = y, 
+                  fill = layer)) +
+  geom_sf(data = ca_counties, fill = "white", color = "slategray4") +
+  coord_sf(xlim = c(-125, -116),
+           ylim = c(32, 38)) +
+  theme_minimal() +
+  labs(x = "Longitude",
+       y = "Latitude",
+       title = "Cetaceans Species Richness on the California Coast",
+       fill = "Number of Species") +
+  scale_fill_gradientn(colors = c("white", "aliceblue", "lightskyblue1", "steelblue2", "royalblue1", "navyblue"))+
+   annotation_north_arrow(which_north = "true",
+                          pad_x = unit(0.5, "cm"),
+                          pad_y = unit(0.5, "cm"),
+                          style = north_arrow_fancy_orienteering,
+                          location = "tr")
+
+```
+
+***Figure 1.** Species richness of Cetacean species along the California coast. Species presence was based on a threshold of 0.6; if the probability of occurrence was 0.6 or above, that species was considered "present." The darkest spots on this map indicate 28 species present.*  
