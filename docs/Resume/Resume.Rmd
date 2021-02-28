@@ -16,13 +16,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Two truths and a lie 
-(placeholder - but tell me what your guess is if you read this:))
+# About me  
 
-
- * I've been charged by bison.
- * I've been swimming with orcas. 
- * I've been bitten by a turkey vulture.
+I'm a passionate environmental professional focused on climate change solutions, effective environmental communication, and responsible data analysis and visualization. I am a detail-oriented team player with managerial experience and a commitment to learning and growing. 
 
 # Education
 
@@ -38,19 +34,33 @@ tribble(
 
 # Highlighted Coursework 
 
+ * **Data:** Statistics & Data Analysis for Environmental Science & Management, Advanced Data Analysis, Geographic Information Systems (GIS)
+
+
+ * **Economics, Law, & Policy:** Economics and Policy of Climate Change, Economics of Environmental Management, Environmental Law and Policy, Environmental Politics and Policy, Cost-Benefit Analysis and Non-market Valuation     
+
+
+
+ * **Communication:** Writing Skills for Environmental Professionals, Advanced Environmental Communication, Survey Design and Environmental Public Opinion, Equity and the Environment     
+
+
+
+ * **Energy & Climate:** Energy, Technology and the Environment, Climate Change Impacts and Adaptation, Earth System Science, Life Cycle Assessment (LCA)
+
+
 ```{r}
 ## need to get rid of the comma after data: 
-
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Data:", "", "Statistics & Data Analysis for Environmental Science & Management, Advanced Data Analysis, Geographic Information Systems (GIS)", "(Bren School)",
-  "Economics, Law, & Policy:", "", "Economics and Policy of Climate Change, Economics of Environmental Management, Environmental Law and Policy, Environmental Politics and Policy, Cost-Benefit Analysis and Non-market Valuation", "(Bren School)",
-   "Communication:", "", "Writing Skills for Environmental Professionals, Advanced Environmental Communication, Survey Design and Environmental Public Opinion, Equity and the Environment", "(Bren School)",
-  "Energy & Climate:", "", "Energy, Technology and the Environment, Climate Change Impacts and Adaptation, Earth System Science", "(Bren School)"
-  
-  
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+# 
+# tribble(
+#   ~ Degree, ~ Year, ~ Institution, ~ Where,
+#   "Data", ":", "Statistics & Data Analysis for Environmental Science & Management, Advanced Data Analysis, Geographic Information Systems (GIS)", "(Bren School)",
+#   "Economics, Law, & Policy:", "", "Economics and Policy of Climate Change, Economics of Environmental Management, Environmental Law and Policy, Environmental Politics and Policy, Cost-Benefit Analysis and Non-market Valuation", "(Bren School)",
+#    "Communication:", "", "Writing Skills for Environmental Professionals, Advanced Environmental Communication, Survey Design and Environmental Public Opinion, Equity and the Environment", "(Bren School)",
+#   "Energy & Climate:", "", "Energy, Technology and the Environment, Climate Change Impacts and Adaptation, Earth System Science", "(Bren School)"
+#   
+#   
+# ) %>% 
+#   detailed_entries(Degree, Year, Institution, Where)
 ```
 
 # Professional Experience 
@@ -59,7 +69,7 @@ tribble(
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
   "Research & Engagement Intern", "2020", "Santa Barbara County Food Action Network", "Santa Barbara, CA",
-  "Teaching Assistant", "2019-2020", "University of California, Santa Barbara", "Santa Barbara, CA",
+  "Teaching Assistant (Sociology & Biology)", "2019-2020", "University of California, Santa Barbara", "Santa Barbara, CA",
   "Environmental Educator/Naturalist", "2015-2019", "Exploring New Horizons Outdoor School", "Loma Mar, CA",
   "Summer Camp Director", "2018", "Life Lab", "Santa Cruz, CA",
   "Ecuador Trip Co-Leader", "2017", "The Road Less Traveled", "Ecuador",
@@ -84,14 +94,20 @@ tribble(
 
 # Skills and Certifications 
 
+ * **Computer & Software:** Microsoft Office Suite (Excel, PowerPoint, Word), R and RStudio, ArcGIS, Slack, Zoom, Trello
+ 
+ * **Language:** Spanish (verbal and written proficiency), English fluency
+ 
+ * **Certifications:** Wilderness First Responder, California Naturalist Program (2014)
+
 
 ```{r}
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Computer & Software:", "", "Microsoft Office Suite (Excel, PowerPoint, Word), R and RStudio, ArcGIS, Slack, Zoom, Trello", "",
-  "Language:", "", "Spanish (verbal and written proficiency)", "",
-  "Certifications:", "", "Wilderness First Responder, California Naturalist Program (2014)", ""
-
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+# tribble(
+#   ~ Degree, ~ Year, ~ Institution, ~ Where,
+#   "Computer & Software:", "", "Microsoft Office Suite (Excel, PowerPoint, Word), R and RStudio, ArcGIS, Slack, Zoom, Trello", "",
+#   "Language:", "", "Spanish (verbal and written proficiency)", "",
+#   "Certifications:", "", "Wilderness First Responder, California Naturalist Program (2014)", ""
+# 
+# ) %>% 
+#   detailed_entries(Degree, Year, Institution, Where)
 ```

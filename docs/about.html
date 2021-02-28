@@ -87,27 +87,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>ALICIA FENNELL: About</title>
 
-  <meta property="description" itemprop="description" content="Projects section."/>
+  <meta property="description" itemprop="description" content="A bit about me"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="ALICIA FENNELL: About"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Projects section."/>
+  <meta property="og:description" content="A bit about me"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="ALICIA FENNELL"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="ALICIA FENNELL: About"/>
-  <meta property="twitter:description" content="Projects section."/>
+  <meta property="twitter:description" content="A bit about me"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","image","description"]}},"value":[{"type":"character","attributes":{},"value":["About"]},{"type":"character","attributes":{},"value":["mountains.jpg"]},{"type":"character","attributes":{},"value":["Projects section.  "]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","image","description"]}},"value":[{"type":"character","attributes":{},"value":["About"]},{"type":"character","attributes":{},"value":["mountains.jpg"]},{"type":"character","attributes":{},"value":["A bit about me  "]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2124,6 +2124,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono');
   @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Oi&display=swap'); 
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
   html {
     /*-- Main font sizes --*/
@@ -2141,7 +2142,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*-- Specify custom fonts ~~~ must be imported above   --*/
     --heading-font:    "Lora", serif;
     --mono-font:       "Lora", serif;
-    --body-font:       'Lora', serif;
+    --body-font:       "Lora", serif;
     --navbar-font:     "Lora", serif;  /* websites + blogs only */
   }
 
@@ -2188,6 +2189,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Image sizing --*/
   .distill-site-header .logo img{
     max-height: 70px; /* Makes logo bigger, default was 20px */
+  }
+
+
+  /* links - not working */
+  a { 
+    color: #DE5D83;
+  }
+
+  a:hover {
+   color: #006A4E; /* darker color when hovering */
   }</style>
   <style type="text/css">
   /* base style */
@@ -2364,7 +2375,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About","description":"Projects section.","authors":[]}
+{"title":"About","description":"A bit about me","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2382,7 +2393,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="index.html">HOME</a>
 <a href="about.html">ABOUT</a>
 <a href="Resume/Resume.pdf">RESUME</a>
-<a href="blog.html">PROJECTS</a>
+<a href="projects.html">PROJECTS</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2395,17 +2406,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>About</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Projects section.</p></p>
+<p><p>A bit about me</p></p>
 </div>
 
 
 <div class="d-article">
-<p>Maybe I’ll write some things about myself here…</p>
+<h3 id="two-truths-and-a-lie">Two truths and a lie</h3>
+<ul>
+<li>I’ve been charged by bison.</li>
+<li>I’ve been swimming with orcas.</li>
+<li>I’ve been bitten by a turkey vulture.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>😜 </code></pre>
-<pre><code>🕘 </code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

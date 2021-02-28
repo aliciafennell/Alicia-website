@@ -13,6 +13,6 @@ navbar:
     - text: "RESUME"
       href: Resume/Resume.pdf
     - text: "PROJECTS"
-      href: blog.html
+      href: projects.html
 output: distill::distill_article
 theme: style.css

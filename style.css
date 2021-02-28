@@ -13,6 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oi&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 html {
   /*-- Main font sizes --*/
@@ -30,7 +31,7 @@ html {
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    "Lora", serif;
   --mono-font:       "Lora", serif;
-  --body-font:       'Lora', serif;
+  --body-font:       "Lora", serif;
   --navbar-font:     "Lora", serif;  /* websites + blogs only */
 }
 
@@ -77,4 +78,14 @@ d-appendix {
 /*-- Image sizing --*/
 .distill-site-header .logo img{
   max-height: 70px; /* Makes logo bigger, default was 20px */
+}
+
+
+/* links - not working */
+a { 
+  color: #DE5D83;
+}
+
+a:hover {
+ color: #006A4E; /* darker color when hovering */
 }

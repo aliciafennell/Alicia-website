@@ -2,7 +2,7 @@
 title: "About"
 image: "mountains.jpg"
 description: |
-  Projects section.  
+  A bit about me  
 ---
 
 ```{r setup, include=FALSE}
@@ -11,10 +11,13 @@ knitr::opts_chunk$set(echo = FALSE)
 library(emo)
 ```
 
-Maybe I'll write some things about myself here...  
+### Two truths and a lie 
+
+ * I've been charged by bison.
+ * I've been swimming with orcas. 
+ * I've been bitten by a turkey vulture.
 
 ```{r}
 emo::ji("prank")
-emo::ji("clock")
 ```
 
