@@ -1,7 +1,7 @@
 ---
-title: "Working with Raster Data"
+title: "California Cetaceans"
 description: |
-  Exploring species richness of Cetaceans along the California coast
+  Working with raster data to explore species richness of Cetaceans along the California coast
 author:
   - name: Alicia Fennell
     url: {}

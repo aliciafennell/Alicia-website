@@ -2130,12 +2130,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --code-size:       14px;
     --aside-size:      12px;
     --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #0D98BA;
-    --header-color:    #0D98BA;
+    
+    /*-- Main font colors -- dark green top and teal fonts*/
+    --title-color:     #26619C;
+    --header-color:    #064E40;
     --body-color:      #000000;
-    --aside-color:     #0D98BA;
-    --fig-cap-color:   #0D98BA;
+    --aside-color:     #064E40;
+    --fig-cap-color:   #064E40;
+    
+    
     /*-- Specify custom fonts ~~~ must be imported above   --*/
     --heading-font:    "Lora", serif;
     --mono-font:       "Lora", serif;
@@ -2167,13 +2170,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /*-- WEBSITE HEADER + FOOTER --*/
   /* These properties only apply to Distill sites and blogs  */
-
+  /*  background = 064E40, hover =  0D98BA, text = FEFEFA for the dark green header */
+  /* 0093AF teal */
+  /* 87A96B green */
+  /* 5F9EA0 muted teal */
   .distill-site-header {
-    --title-size:       22px;
+    --title-size:       20px;
     --text-color:       #FEFEFA; 
     --text-size:        18px;
-    --hover-color:      #0D98BA; 
-    --bkgd-color:       #064E40; 
+    --hover-color:      #064E40; 
+    --bkgd-color:       #5F9EA0; 
   }
 
   .distill-site-footer {
@@ -2381,7 +2387,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <span class="logo">
-<img src="bry.png"/>
+<img src="geese.PNG"/>
 </span>
 <a href="index.html" class="title">ALICIA FENNELL</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
@@ -2533,6 +2539,74 @@ function init_posts_list() {
 <div class="posts-container posts-apply-limit l-page">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Projects">Projects</h1>
+<a href="posts/2021-03-11-harrypotter/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">March 11, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Alicia Fennell</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-03-11-harrypotter/harrypotter_files/figure-html5/unnamed-chunk-1-1.png"/>
+</div>
+<div class="description">
+<h2>Text Analysis: Harry Potter</h2>
+<div class="dt-tags"></div>
+<p>A look into Harry Potter books 1 and 7: word clouds and sentiment analysis</p>
+</div>
+</a>
+<a href="posts/2021-03-11-lobsters/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">March 11, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Alicia Fennell &amp; Rachel Rhodes</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-03-11-lobsters/lobsters_files/figure-html5/unnamed-chunk-2-1.png"/>
+</div>
+<div class="description">
+<h2>California Spiny Lobsters and MPAs</h2>
+<div class="dt-tags"></div>
+<p>Exploring impacts of Marine Protected Areas on California Spiny Lobster distribution along Santa Barbara coast</p>
+</div>
+</a>
+<a href="posts/2021-03-11-pca/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">March 11, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Alicia Fennell</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-03-11-pca/pca_files/figure-html5/unnamed-chunk-1-1.png"/>
+</div>
+<div class="description">
+<h2>Principal components analysis</h2>
+<div class="dt-tags"></div>
+<p>Exploring relationships between nutrients and food groups</p>
+</div>
+</a>
+<a href="posts/2021-03-11-salamanders/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">March 11, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Alicia Fennell &amp; Rachel Rhodes</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-03-11-salamanders/pgs.jpg"/>
+</div>
+<div class="description">
+<h2>Coastal Giant Salamanders and Land Disturbances</h2>
+<div class="dt-tags"></div>
+<p>Exploring abundance and weights of salamanders in Oregon for different sections of forest and types of habitat</p>
+</div>
+</a>
 <a href="posts/2021-02-27-rasterdata/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
@@ -2550,7 +2624,7 @@ function init_posts_list() {
 <p>Exploring species richness of Cetaceans along the California coast</p>
 </div>
 </a>
-<a href="posts/2021-02-08-welcome/" class="post-preview">
+<a href="posts/2018-02-08-welcome/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
 <div class="publishedDate">Feb. 8, 2021</div>
@@ -2559,12 +2633,12 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-02-08-welcome/mountains.jpg"/>
+<img data-src="posts/2018-02-08-welcome/mountains.jpg"/>
 </div>
 <div class="description">
 <h2>Welcome</h2>
 <div class="dt-tags"></div>
-<p>Welcome to my blog! Thanks for joining me here.</p>
+<p>Welcome to my projects page! Thanks for joining me here.</p>
 </div>
 </a>
 </div>

@@ -1,0 +1,259 @@
+---
+title: "Text Analysis: Harry Potter"
+description: |
+  A look into Harry Potter books 1 and 7: word clouds and sentiment analysis
+author:
+  - name: Alicia Fennell
+    url: {}
+date: 03-11-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: Code
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(pdftools)
+library(ggwordcloud)
+library(here)
+library(tm)
+library(harrypotter)
+library(patchwork)
+```
+
+### Harry Potter 
+
+The Harry Potter series, written by J.K. Rowling, is arguably one of the best book series in existence. In this project, I show the top 50 words used in books 1 and 7, use the AFINN lexicon to perform sentiment analysis on both books, and compare prevalence of gender in book 7. If I had more time, I would have loved to: find and compare the mean AFINN scores for all 7 books; choose a few specific words and graph how often they appear in the texts across the series (for example, "love," "death," "magic," etc.); find the top most positive and most negative chapters across the series (with first guessing which those might be!); and more. I would've also loved to add some fun symbols, images, and fonts related to Harry Potter. Oh, how the time gets away from you in week 8 of winter quarter! 
+
+#### Special thanks to these two `harrypotter` packages: 
+
+  Alejandro Jimenez Rico (2020). harrypotter: Palettes Generated from All
+  "Harry Potter" Movies. R package version 2.1.1.
+  https://CRAN.R-project.org/package=harrypotter
+  
+  Bradley Boehmke (2021). harrypotter: Harry Potter Book Series. R package
+  version 0.1.0. https://github.com/bradleyboehmke/harrypotter
+  
+#### Book citations: 
+
+  Rowling, J.K. *Harry Potter and the Sorcerer’s Stone.* New York: Scholastic, 1999. Print.
+  
+  Rowling, J.K. *Harry Potter and the Deathly Hallows.* New York: Scholastic, 1999. Print.
+
+### Word Clouds 
+```{r}
+## Book 1
+## Import and wrangle text data using harrypotter package
+## Write to csv so that I can then use the other harrypotter package 
+
+# hp1 <- data.frame(philosophers_stone) %>% 
+#   mutate(chapter = 1:17) %>% 
+#   mutate(text_full = str_split(philosophers_stone, pattern = ' ')) %>%
+#   unnest(philosophers_stone) %>% 
+#   mutate(text_full = str_squish(text_full)) 
+# 
+# hp1 <- write_csv(hp1, here("hp1"))
+
+hp1 <- read_csv("hp1")
+
+unnested <- hp1 %>% 
+  unnest_tokens(word, text_full) 
+
+hp1_nostopwords <- unnested %>% 
+  anti_join(stop_words) 
+
+hp1_counts <- hp1_nostopwords %>% 
+  count(chapter, word) %>% 
+  arrange(-n)
+
+top50_hp1 <- hp1_nostopwords %>% 
+  count(word) %>% 
+  arrange(-n) %>% 
+  slice(1:50)
+
+angled <- top50_hp1 %>% 
+  mutate(angle = 90 * sample(c(0,1), n(), replace = TRUE, prob = c(60, 40)))
+
+## Make a word cloud using the top 50 words from the book (without stop words)
+ggplot(data = angled, aes(label = word)) +
+  geom_text_wordcloud(aes(size = n,
+                          color = word,
+                          angle = angle),
+                      shape = "square") +
+  scale_size_area(max_size = 17) +
+  theme_minimal() +
+  scale_color_hp_d(option = "Gryffindor")
+
+```
+
+***Figure 1.*** The top 50 most common words used in Harry Potter and the Philosopher's Stone (excluding "stop words"). Color scheme "Gryffindor."  
+
+
+```{r}
+## Word cloud code for HP 7 
+
+# hp7 <- data.frame(deathly_hallows) %>% 
+#   mutate(chapter = 1:37) %>% 
+#   mutate(text_full = str_split(deathly_hallows, pattern = ' ')) %>%
+#   unnest(deathly_hallows) %>% 
+#   mutate(text_full = str_squish(text_full)) 
+# 
+# hp7 <- write_csv(hp7, here("hp7"))
+
+hp7 <- read_csv("hp7")
+
+unnested_hp7 <- hp7 %>% 
+  unnest_tokens(word, text_full) 
+
+hp7_nostopwords <- unnested_hp7 %>% 
+  anti_join(stop_words) 
+
+hp7_counts <- hp7_nostopwords %>% 
+  count(chapter, word) %>% 
+  arrange(-n)
+
+top50_hp7 <- hp7_nostopwords %>% 
+  count(word) %>% 
+  arrange(-n) %>% 
+  slice(1:50)
+
+top100_hp7 <- hp7_nostopwords %>% 
+  count(word) %>% 
+  arrange(-n) %>% 
+  slice(1:100)
+
+## Word cloud 
+angled7 <- top50_hp7 %>% 
+  mutate(angle = 90 * sample(c(0,1), n(), replace = TRUE, prob = c(60, 40)))
+
+ggplot(data = angled7, aes(label = word)) +
+  geom_text_wordcloud(aes(size = n,
+                          color = word,
+                          angle = angle),
+                      shape = "square") +
+  scale_size_area(max_size = 17) +
+  theme_minimal() +
+  scale_color_hp_d(option = "Slytherin")
+
+```
+ 
+***Figure 2.*** The top 50 most common words used in Harry Potter and the Deathly Hallows (excluding "stop words"). Color scheme "Slytherin."  
+
+### Sentiment Analysis 
+
+```{r}
+## find AFINN means for book 1
+
+hp_afinn <- hp1_counts %>% 
+  inner_join(get_sentiments("afinn"))
+
+afinn_means <- hp_afinn %>% 
+  group_by(chapter) %>% 
+  summarize(mean_afinn = mean(value))
+
+hp1_mean_afinn <- hp_afinn %>% 
+  summarize(mean_afinn = mean(value))
+
+hp1_graph <- ggplot(data = afinn_means, 
+       aes(x = fct_rev(as.factor(chapter)), 
+           y = mean_afinn)) +
+  geom_col(fill = ("firebrick4")) +
+  coord_flip() + 
+  theme_minimal() +
+  labs(y = "Mean AFINN Score",
+       x = "Chapter Number",
+       title = "Book 1: Philosopher's Stone") 
+
+# hp1_graph
+
+```
+
+
+
+```{r}
+## AFINN means for book 7 
+
+hp7_afinn <- hp7_counts %>% 
+  inner_join(get_sentiments("afinn"))
+
+hp7_mean_afinn <- hp7_afinn %>% 
+  summarize(mean_afinn = mean(value))
+
+afinn_means_hp7 <- hp7_afinn %>% 
+  group_by(chapter) %>% 
+  summarize(mean_afinn = mean(value))
+
+hp7_graph <- ggplot(data = afinn_means_hp7, 
+       aes(x = fct_rev(as.factor(chapter)), 
+           y = mean_afinn)) +
+  geom_col(fill = "darkseagreen4") +
+  coord_flip() + 
+  theme_minimal() +
+  labs(y = "Mean AFINN Score",
+       x = "Chapter Number",
+       title = "Book 7: Deathly Hallows") +
+  scale_x_discrete(breaks = c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37))
+
+# hp7_graph
+ 
+```
+
+
+```{r}
+## Combine the mean AFINN graphs 
+
+graph_combined <- (hp1_graph | hp7_graph) 
+
+graph_combined
+
+```
+
+***Figure 3.*** Mean AFINN scores for each chapter in Harry Potter books 1 and 7 (excluding "stop words"). 
+
+Some observations:
+
+- Both books have almost entirely negative AFINN scores
+- The only positive mean AFINN score in book 1 is chapter 1 (because it takes place right when Voldemort was thought to be defeated). In book 7, the positive mean AFINN scores occur in chapter 8 (at Bill and Fleur's wedding, before it got crashed by Death Eaters) and chapter 37 (19 years after the Battle of Hogwarts and Voldemort's actual defeat)
+- Book 7's negative AFINN mean scores are more negative than those of book 1 (see x axes)
+
+### Gender 
+
+```{r}
+## Gender comparison 
+
+top_hp7_names <- top100_hp7 %>% 
+  filter(word %in% c("harry", "ron", "hermione", "hagrid", "dumbledore", "voldemort", "harry's", "snape", "lupin", "luna", "kreacher", "griphook", "hermione's", "bill", "ron's", "ginny", "dumbledore's", "albus", "voldemort's", "fred", "neville", "xenophilius")) %>% 
+  mutate(gender = c("m", "f", "m", "m", "m", "m", "m", "m", "m", "f", "m", "m", "m", "f", "m", "f", "m", "m", "m", "m", "m", "m"))
+
+gender_counts_hp7 <- top_hp7_names %>% 
+  group_by(gender) %>% 
+  summarize(count = sum(n))
+
+ggplot(data = gender_counts_hp7,
+       aes(x = gender,
+           y = count)) +
+  geom_col(aes(fill = gender)) +
+  theme_minimal() +
+  labs(x = "Gender",
+       y = "Number of Mentions",
+       title = "Book 7: Character Mentions by Gender Within Top 100 Words",
+       fill = "Gender") +
+  scale_fill_manual(values = c("maroon4", "turquoise4"))
+
+```
+
+***Figure 4.*** Number of mentions for characters of different genders within the top 100 words in book 7. "Weasley" and "Potter" were not included, because those names could refer to men or women. There is likely some double counting (for example, both "Albus" and "Dumbledore" are included). Color scheme inspired by "LunaLovegood" from `harrypotter` color palette package.
+
+Some observations:
+
+- 22 names are included in this data (from the top 100 words); only 3 are names of women (Hermione, Luna, and Ginny)
+- Female name counts = 1408 and male name counts = 6370
+- Harry Potter is an incredible series and has very cool female characters... *and* it is very male-dominated. 

@@ -2,3 +2,11 @@
 title: "Projects"
 listing: posts
 ---
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+Welcome to my projects page! 
+
+These projects were assignments for Statistics & Data Analysis for Environmental Science & Management (ESM 206) and Advanced Data Analysis (ESM 244). Click the "Code" button throughout the reports to show the data wrangling and visualization codes. 

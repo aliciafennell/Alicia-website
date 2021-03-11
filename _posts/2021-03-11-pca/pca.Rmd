@@ -1,0 +1,86 @@
+---
+title: "Principal components analysis"
+description: |
+  Exploring relationships between nutrients and food groups 
+author:
+  - name: Alicia Fennell
+    url: {}
+date: 03-11-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: Code
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+
+## Attach packages
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(ggfortify)
+library(readxl)
+library(gghighlight)
+library(plotly)
+library(lubridate)
+library(patchwork)
+
+```
+
+Principal components analysis 
+
+The data was downloaded from the U.S. Department of Agriculture (USDA) FoodData Central website. The data contained nutrient content for different individual foods across 25 different food groups. This assignment uses principal component analysis (PCA) to explore the relationships between a few selected nutrients across three different food groups.   
+
+```{r}
+## Read in the USDA nutrient data, clean names, and filter to only include a few food groups of interest
+
+nutrients <- read_csv("usda_nutrients.csv") %>% 
+  clean_names() %>% 
+  filter(food_group == c("Vegetables and Vegetable Products", "Nut and Seed Products", "Sausages and Luncheon Meats"))
+
+## Create a data frame for PCA and choose the variables of interest 
+## Scale the data to ensure no data is overweighted 
+## Run PCA using prcomp()
+
+nut_pca <- nutrients %>% 
+  select(fiber_g, fat_g, vit_e_mg, vit_c_mg, carb_g, energy_kcal) %>% 
+  rename("Fiber (g)" = fiber_g) %>%
+  rename("Fat (g)" = fat_g) %>%
+  rename("Vitamin E (mg)" = vit_e_mg) %>%
+  rename("Vitamin C (mg)" = vit_c_mg) %>%
+  rename("Carbohydrates (g)" = carb_g) %>%
+  rename("Energy (kcal)" = energy_kcal) %>%
+  drop_na() %>% 
+  scale() %>%
+  prcomp() 
+
+## Create a biplot 
+
+autoplot(nut_pca,
+         data = nutrients,
+         colour = "food_group",
+         loadings = TRUE,
+         loadings.label = TRUE,
+         label.size = 5,
+         loadings.colour = "black",
+         loadings.label.colour = "black",
+         loadings.label.vjust = 2,
+         loadings.label.hjust = .25,
+         xlim = (c(-0.1, 0.25))) +
+  theme_minimal() +
+  scale_color_manual(values = c("goldenrod2", "firebrick4", "chartreuse4")) 
+
+```
+
+***Figure 1.*** Principal component analysis (PCA) of various nutrients across food groups. The first two principal components explain 45.02% and 19.26% of the variance in the data. 
+
+- 64.28% of variance in the data explored is explained by the first two principal components 
+- The variables fat and energy are positively correlated, and they are negatively correlated with vitamin C. 
+- Vitamin E and vitamin C show little to no correlation. 
+- Vegetables and vegetable products tend to be clustered together in multivariate space, and so do sausages and luncheon meats. Nut and seed products show less clustering than the other two food groups.
+- The sausage and luncheon meats observations tend to cluster around the fat variable in multivariate space, while vegetables and vegetable products tend to cluster around vitamin C and carbohydrates. 

@@ -4,7 +4,7 @@ description: |
   Alicia Fennell
 output_dir: "docs"
 navbar:
-  logo: bry.png
+  logo: geese.PNG
   right:
     - text: "HOME"
       href: index.html

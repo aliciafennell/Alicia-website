@@ -22,12 +22,15 @@ html {
   --code-size:       14px;
   --aside-size:      12px;
   --fig-cap-size:    13px;
-  /*-- Main font colors --*/
-  --title-color:     #0D98BA;
-  --header-color:    #0D98BA;
+  
+  /*-- Main font colors -- dark green top and teal fonts*/
+  --title-color:     #26619C;
+  --header-color:    #064E40;
   --body-color:      #000000;
-  --aside-color:     #0D98BA;
-  --fig-cap-color:   #0D98BA;
+  --aside-color:     #064E40;
+  --fig-cap-color:   #064E40;
+  
+  
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    "Lora", serif;
   --mono-font:       "Lora", serif;
@@ -59,13 +62,16 @@ d-appendix {
 
 /*-- WEBSITE HEADER + FOOTER --*/
 /* These properties only apply to Distill sites and blogs  */
-
+/*  background = 064E40, hover =  0D98BA, text = FEFEFA for the dark green header */
+/* 0093AF teal */
+/* 87A96B green */
+/* 5F9EA0 muted teal */
 .distill-site-header {
-  --title-size:       22px;
+  --title-size:       20px;
   --text-color:       #FEFEFA; 
   --text-size:        18px;
-  --hover-color:      #0D98BA; 
-  --bkgd-color:       #064E40; 
+  --hover-color:      #064E40; 
+  --bkgd-color:       #5F9EA0; 
 }
 
 .distill-site-footer {
