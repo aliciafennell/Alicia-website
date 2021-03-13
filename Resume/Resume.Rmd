@@ -47,20 +47,14 @@ tribble(
 
  * **Energy & Climate:** Energy, Technology and the Environment, Climate Change Impacts and Adaptation, Earth System Science, Life Cycle Assessment (LCA)
 
-
+# Master's Group Project
 ```{r}
-## need to get rid of the comma after data: 
-# 
-# tribble(
-#   ~ Degree, ~ Year, ~ Institution, ~ Where,
-#   "Data", ":", "Statistics & Data Analysis for Environmental Science & Management, Advanced Data Analysis, Geographic Information Systems (GIS)", "(Bren School)",
-#   "Economics, Law, & Policy:", "", "Economics and Policy of Climate Change, Economics of Environmental Management, Environmental Law and Policy, Environmental Politics and Policy, Cost-Benefit Analysis and Non-market Valuation", "(Bren School)",
-#    "Communication:", "", "Writing Skills for Environmental Professionals, Advanced Environmental Communication, Survey Design and Environmental Public Opinion, Equity and the Environment", "(Bren School)",
-#   "Energy & Climate:", "", "Energy, Technology and the Environment, Climate Change Impacts and Adaptation, Earth System Science", "(Bren School)"
-#   
-#   
-# ) %>% 
-#   detailed_entries(Degree, Year, Institution, Where)
+
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Evaluating the climate mitigation potential of natural and working lands in Santa Barbara County", "2020-2021", "Client: County of Santa Barbara, Sustainability Division. Roles: Co-data manager, co-outreach manager", "Our team estimated county-wide carbon stocks and nitrous oxide emissions, projected land use change in working lands to create a baseline scenario, modeled forecasted changes to carbon stocks and emissions through land management scenarios, engaged with local experts, and recommended realistic greenhouse gas reduction strategies to the County",
+) %>%
+  detailed_entries(Degree, Year, Institution, Where)
 ```
 
 # Professional Experience 
@@ -71,9 +65,9 @@ tribble(
   "Research & Engagement Intern", "2020", "Santa Barbara County Food Action Network", "Santa Barbara, CA",
   "Teaching Assistant (Sociology & Biology)", "2019-2020", "University of California, Santa Barbara", "Santa Barbara, CA",
   "Environmental Educator/Naturalist", "2015-2019", "Exploring New Horizons Outdoor School", "Loma Mar, CA",
-  "Summer Camp Director", "2018", "Life Lab", "Santa Cruz, CA",
+  "Director", "2018", "Life Lab Summer Camp", "Santa Cruz, CA",
   "Ecuador Trip Co-Leader", "2017", "The Road Less Traveled", "Ecuador",
-  "Summer Camp Assistant Director", "2015-2016", "Life Lab", "Santa Cruz, CA",
+  "Assistant Director", "2015-2016", "Life Lab Summer Camp", "Santa Cruz, CA",
   "Naturalist Intern", "2014-2015", "Sierra Outdoor School", "Sonora, CA"
 ) %>% 
   detailed_entries(Degree, Year, Institution, Where)
@@ -94,7 +88,7 @@ tribble(
 
 # Skills and Certifications 
 
- * **Computer & Software:** Microsoft Office Suite (Excel, PowerPoint, Word), R and RStudio, ArcGIS, Slack, Zoom, Trello
+ * **Computer & Software:** Microsoft Office Suite (Excel, PowerPoint, Word), Google Workspace, R and RStudio, ArcGIS, Slack, Zoom, Trello
  
  * **Language:** Spanish (verbal and written proficiency), English fluency
  

@@ -6,28 +6,28 @@
       "description": "A bit about me  ",
       "author": [],
       "contents": "\nTwo truths and a lie\nI’ve been charged by bison.\nI’ve been swimming with orcas.\nI’ve been bitten by a turkey vulture.\nLogo image created by the incredible Bryanna Whitney (bryanna.whitney@gmail.com)\n\n\n\nWild Geese\nBy Mary Oliver\nYou do not have to be good.You do not have to walk on your kneesfor a hundred miles through the desert repenting.You only have to let the soft animal of your bodylove what it loves.Tell me about despair, yours, and I will tell you mine.Meanwhile the world goes on.Meanwhile the sun and the clear pebbles of the rainare moving across the landscapes,over the prairies and the deep trees,the mountains and the rivers.Meanwhile the wild geese, high in the clean blue air,are heading home again.Whoever you are, no matter how lonely,the world offers itself to your imagination,calls to you like the wild geese, harsh and exciting -over and over announcing your placein the family of things.\n\n\n\n",
-      "last_modified": "2021-03-11T12:33:07-08:00"
+      "last_modified": "2021-03-13T08:54:18-08:00"
     },
     {
       "path": "blog.html",
       "title": "Projects",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-11T12:33:09-08:00"
+      "last_modified": "2021-03-13T08:54:20-08:00"
     },
     {
       "path": "index.html",
       "title": "Alicia Fennell",
       "author": [],
       "contents": "\n\n          \n          \n          \n          \n          ALICIA FENNELL\n          \n          \n          HOME\n          ABOUT\n          RESUME\n          PROJECTS\n          ☰\n          \n          \n      \n        \n          \n            \n              \n            \n              Alicia Fennell\n            \n            \n              \n                \n                    \n                      \n                        LinkedIn\n                      \n                    \n                  \n                                    \n                    \n                      \n                        GitHub\n                      \n                    \n                  \n                                    \n                    \n                      \n                        Email\n                      \n                    \n                  \n                                  \n            \n          \n        \n        \n        \n          \n            Hello! I’m a master’s student at the Bren School of Environmental Science & Management specializing in energy and climate and strategic environmental communication. I’m most interested in food systems, environmental justice, climate action planning, and learning more about our planet and the roles we can play in reducing the damages of climate change.\n            Outside of school, I love cooking, baking, backpacking, writing postcards to friends, and generally not living life on Zoom. I worked for 5 years teaching students in the outdoors, which has given me a deep appreciation for California’s natural lands. I’m always excited to talk with people about environmental issues, tasty recipes, outdoor education, and good books, so please reach out if you want to connect!\n          \n        \n      \n    \n\n    \n      \n        \n          \n            \n              \n            \n              Alicia Fennell\n            \n            \n              \n                \n                                    \n                    \n                      LinkedIn\n                    \n                  \n                                    \n                    \n                      GitHub\n                    \n                  \n                                    \n                    \n                      Email\n                    \n                  \n                                  \n              \n            \n            \n              Hello! I’m a master’s student at the Bren School of Environmental Science & Management specializing in energy and climate and strategic environmental communication. I’m most interested in food systems, environmental justice, climate action planning, and learning more about our planet and the roles we can play in reducing the damages of climate change.\n              Outside of school, I love cooking, baking, backpacking, writing postcards to friends, and generally not living life on Zoom. I worked for 5 years teaching students in the outdoors, which has given me a deep appreciation for California’s natural lands. I’m always excited to talk with people about environmental issues, tasty recipes, outdoor education, and good books, so please reach out if you want to connect!\n            \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-03-11T12:33:09-08:00"
+      "last_modified": "2021-03-13T08:54:20-08:00"
     },
     {
       "path": "projects.html",
       "title": "Projects",
       "author": [],
-      "contents": "\n     \nWelcome to my projects page!\nThese projects were assignments for Statistics & Data Analysis for Environmental Science & Management (ESM 206) and Advanced Data Analysis (ESM 244). Click the “Code” button throughout the reports to show the data wrangling and visualization codes.\n\n\n\n",
-      "last_modified": "2021-03-11T12:33:10-08:00"
+      "contents": "\n         \n\n\n\nWelcome to my projects page!\nThese projects were assignments for Statistics & Data Analysis for Environmental Science & Management (ESM 206) and Advanced Data Analysis (ESM 244). Click the “Code” button throughout the reports to show the data wrangling and visualization codes.\n\n\n\n",
+      "last_modified": "2021-03-13T08:57:01-08:00"
     }
   ],
   "collections": ["posts/posts.json"]
