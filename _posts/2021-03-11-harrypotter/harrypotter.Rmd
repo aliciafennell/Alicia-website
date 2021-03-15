@@ -1,7 +1,7 @@
 ---
 title: "Text Analysis: Harry Potter"
 description: |
-  A look into Harry Potter books 1 and 7: word clouds and sentiment analysis
+  Exploring Harry Potter books 1 and 7: word clouds and sentiment analysis
 author:
   - name: Alicia Fennell
     url: {}
@@ -44,9 +44,9 @@ The Harry Potter series, written by J.K. Rowling, is arguably one of the best bo
   
 #### Book citations: 
 
-  Rowling, J.K. *Harry Potter and the Sorcerer’s Stone.* New York: Scholastic, 1999. Print.
+  Rowling, J K. *Harry Potter and the Philosopher's Stone.* London: Bloomsbury Pub, 1997. Print.
   
-  Rowling, J.K. *Harry Potter and the Deathly Hallows.* New York: Scholastic, 1999. Print.
+  Rowling, J.K. *Harry Potter and the Deathly Hallows.* New York: Scholastic, 2007 Print.
 
 ### Word Clouds 
 ```{r}

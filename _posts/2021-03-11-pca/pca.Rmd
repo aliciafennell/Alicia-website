@@ -1,5 +1,5 @@
 ---
-title: "Principal components analysis"
+title: "Principal Components Analysis"
 description: |
   Exploring relationships between nutrients and food groups 
 author:
@@ -32,7 +32,6 @@ library(patchwork)
 
 ```
 
-Principal components analysis 
 
 The data was downloaded from the U.S. Department of Agriculture (USDA) FoodData Central website. The data contained nutrient content for different individual foods across 25 different food groups. This assignment uses principal component analysis (PCA) to explore the relationships between a few selected nutrients across three different food groups.   
 

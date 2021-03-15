@@ -17,12 +17,13 @@ knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE)
 ```
+This project was completed in the fall of 2019. 
 
 # Introduction 
 
 Starting in 2012, data has been collected on the abundance, size, and location of the California spiny lobster (Panulirus interruptus) in an effort to better understand the ecology of the coastal kelp forests along the Santa Barbara coast. California spiny lobsters are an important predator species that can help maintain the health of the kelp forest ecosystem by preying on herbivorous kelp-eating species like sea urchins. 
 
-![**California spiny lobster (Panulirus interruptus).** *Photo: californiadiver.com*](lobster.jpg)
+![**California spiny lobster (Panulirus interruptus).** Photo: californiadiver.com](lobster.jpg)
 
 In January of 2012, two sites in the Santa Barbara Channel, Isla Vista and Naples, were designated as Marine Protected Areas (MPA). This designation regulates and limits human activity in a given area in an effort to conserve biodiversity and improve overall ecosystem health. In this report, findings on lobster size and abundance were compared between sites with MPA status and sites without MPA status. Furthermore, data was compared between 2012 and 2018 in an attempt to see if trends exist in lobster distribution over time. This data is relevant in assessing the effectiveness of MPA designation and how it impacts lobster abundance and size.
 

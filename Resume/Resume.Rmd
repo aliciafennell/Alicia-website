@@ -52,7 +52,7 @@ tribble(
 
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Evaluating the climate mitigation potential of natural and working lands in Santa Barbara County", "2020-2021", "Client: County of Santa Barbara, Sustainability Division. Roles: Co-data manager, co-outreach manager", "Our team estimated county-wide carbon stocks and nitrous oxide emissions, projected land use change in working lands to create a baseline scenario, modeled forecasted changes to carbon stocks and emissions through land management scenarios, engaged with local experts, and recommended realistic greenhouse gas reduction strategies to the County",
+  "Evaluating the climate mitigation potential of natural and working lands in Santa Barbara County", "2020-2021", "Client: County of Santa Barbara, Sustainability Division. Roles: Data manager, outreach manager", "Our team estimated county-wide carbon stocks and nitrous oxide emissions, projected land use change in working lands to create a baseline scenario, modeled forecasted changes to carbon stocks and emissions through land management scenarios, engaged with local experts, and recommended realistic greenhouse gas reduction strategies to the County to incorporate into its Climate Action Plan update",
 ) %>%
   detailed_entries(Degree, Year, Institution, Where)
 ```
