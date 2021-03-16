@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = FALSE)
 #  A bit about me  
 ```
 
-I graduated from UC Santa Cruz in 2014 with an excitement for all aspects of environmental studies and a love for being outside. Some of my favorite experiences from UCSC include living and studying in Spain, taking sailing and gardening classes, and participating in a ten-week field course. Natural History Field Quarter took me (and 31 of my classmates) to some of the most incredible spots in California&mdash;Mojave desert, Big Sur, Mendocino forest, and Mono Lake.
+I graduated from UC Santa Cruz in 2014 with an excitement for all aspects of environmental studies and a love for being outside. Some of my favorite experiences from UCSC include living and studying in Spain, taking sailing and gardening classes, and participating in a ten-week field course. Natural History Field Quarter took me (and 27 of my classmates) to some of the most incredible spots in California&mdash;Mojave desert, Big Sur, Mendocino forest, and Mono Lake.
 
 ```{r, out.width='90%', fig.align='center'}
 
@@ -47,7 +47,7 @@ knitr::include_graphics('zeus.jpg')
  
  </center>
  
-I had always loved school, so I decided to return to my hometown of Santa Barbara to attend the Bren School of Environmental Science & Management. Before Bren, I had years of experience working closely with teams and communicating about the environment; since being at Bren, I've learned technical skills, improved my writing and communication, and deepened my understanding of the environmental field. I'm most interested in food systems and their role in climate change, but I'm also excited to learn more about clean energy, climate action planning, environmental justice, and data science. 
+I had always loved school, so I decided to return to my hometown of Santa Barbara to attend the Bren School of Environmental Science & Management. Before Bren, I had years of experience working closely with teams and communicating about the environment; since being at Bren, I've learned technical skills, improved my writing and communication, and deepened my understanding of the environmental field. I'm most interested in food systems and their role in climate change, and I'm also excited to learn more about clean energy, climate action planning, environmental justice, and data science. 
 
 Thanks for joining me on my website! 
 
